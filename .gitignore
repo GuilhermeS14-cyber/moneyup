@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules/
+work/pgdata/
+work/npm-cache/
+work/*.dump
+work/*.dump.gpg
+*.log

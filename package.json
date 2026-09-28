@@ -1,0 +1,33 @@
+{
+  "name": "fintcc",
+  "version": "1.0.0",
+  "description": "FinTCC: controle financeiro pessoal e educação financeira.",
+  "main": "server.js",
+  "scripts": {
+    "dev": "pglite-server --db=./work/pgdata --port=5432 --host=127.0.0.1 --extensions=pgcrypto --max-connections=8 --run=\"node server.js\" --include-database-url",
+    "start": "node server.js",
+    "db:dev": "pglite-server --db=./work/pgdata --port=5432 --host=127.0.0.1 --extensions=pgcrypto --max-connections=8",
+    "backup": "powershell -ExecutionPolicy Bypass -File scripts/backup.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@electric-sql/pglite-socket": "^0.2.11",
+    "bcryptjs": "^3.0.3",
+    "connect-pg-simple": "^10.0.0",
+    "csrf-csrf": "^4.0.3",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "openai": "^7.23.0",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
